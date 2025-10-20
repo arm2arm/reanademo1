@@ -5,7 +5,7 @@ workflow:
       - name: plot-sin
         environment: 'python:3.9'
         commands:
-          - pip install numpy matplotlib
+          - pip install --no-cache-dir numpy matplotlib
           - python -c "import numpy as np; import matplotlib.pyplot as plt; x = np.linspace(0, 2*np.pi, 100); plt.plot(x, np.sin(x)); plt.xlabel('x'); plt.ylabel('sin(x)'); plt.title('Sine Function'); plt.grid(True); plt.savefig('sin_plot.png', dpi=300, bbox_inches='tight')"
 
 outputs:
